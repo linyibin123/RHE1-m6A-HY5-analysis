@@ -35,7 +35,7 @@ setwd("")
 # ================================
 # 4. Read input data
 # ================================
-data <- read_excel("hypocotyl.xlsx", sheet = "Sheet3")
+data <- read_excel("data/hypocotyl.xlsx", sheet = "Sheet3")
 
 # ================================
 # 5. Convert to long format
@@ -170,9 +170,9 @@ p <- ggplot() +
 # ================================
 # 12. Save figures
 # ================================
-ggsave("Figure_SX_Hypocotyl_boxplot.pdf", p, width = 4, height = 8)
+ggsave("Hypocotyl_cell_length_tree_anova.pdf", p, width = 4, height = 8)
 
-ggsave("Figure_SX_Hypocotyl_boxplot.tiff",
+ggsave("Hypocotyl_cell_length_tree_anova.tiff",
        p, width = 4, height = 8,
        dpi = 300, compression = "lzw")
 
@@ -180,19 +180,19 @@ ggsave("Figure_SX_Hypocotyl_boxplot.tiff",
 # 13. Save results tables
 # ================================
 write.csv(as.data.frame(anova_res),
-          "Table_SX_ANOVA_results.csv",
+          "Table_Hypocotyl_cell_length_tree_anova_ANOVA_results.csv",
           row.names = TRUE)
 
 write.csv(as.data.frame(emm),
-          "Table_SX_emmeans_results.csv",
+          "Table_Hypocotyl_cell_length_tree_anova_emmeans_results.csv",
           row.names = FALSE)
 
 write.csv(cld_res,
-          "Table_SX_emmeans_letters.csv",
+          "Table_Hypocotyl_cell_length_tree_anova_emmeans_letters.csv",
           row.names = FALSE)
 
 write.csv(y_pos,
-          "Table_SX_label_positions.csv",
+          "Table_Hypocotyl_cell_length_tree_anova_label_positions.csv",
           row.names = FALSE)
 
 ############################################################

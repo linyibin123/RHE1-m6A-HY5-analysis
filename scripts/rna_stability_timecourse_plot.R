@@ -1,33 +1,19 @@
 #rna_stability_timecourse_plot.R
 # NOTE:
-# This script provides a representative example for generating
-# time-course line plots used in this study.
-#
-# Similar plotting procedures were applied to other datasets,
-# but are not shown here to avoid redundancy.
-#
-# All line plots in the manuscript were generated using
-# the same workflow with different input datasets.
+# This script provides a representative example for generating time-course line plots used in this study.
+# Similar plotting procedures were applied to other datasets,but are not shown here to avoid redundancy.
+# All line plots in the manuscript were generated using the same workflow with different input datasets.
 ############################################################
 # Title: RNA stability analysis under heat stress (HS vs NS)
 # Description:
-# This script processes time-course expression data and 
-# generates a line plot with error bars (mean ± SE) 
-# comparing HS and NS conditions.
-#
+# This script processes time-course expression data and generates a line plot with error bars (mean ± SE)  comparing HS and NS conditions.
 # IMPORTANT:
-# The input data used in this script must be pre-processed 
-# to represent relative expression levels.
-#
-# Specifically, raw expression values (e.g., Ct values from qRT-PCR) 
+# The input data used in this script must be pre-processed to represent relative expression levels.Specifically, raw expression values (e.g., Ct values from qRT-PCR) 
 # should be normalized prior to analysis, for example:
 # - Using ΔCt or ΔΔCt methods
 # - Normalizing to an internal reference gene
 # - Scaling relative to the 0 h time point (set as 1)
-#
-# This script does NOT perform normalization or relative expression calculation.
-# It assumes that all values in the input file are already normalized 
-# and comparable across samples.
+# This script does NOT perform normalization or relative expression calculation.It assumes that all values in the input file are already normalized and comparable across samples.
 
 ############################################################
 
@@ -60,7 +46,7 @@ cat("Current working directory:", getwd(), "\n")
 # ================================
 # 4. Read input data
 # ================================
-file_path <- "AT5G4340RNAstability.xlsx"
+file_path <- "data/AT5G4340RNAstability.xlsx"
 
 data <- read_excel(file_path, sheet = "Sheet1", col_names = TRUE)
 

@@ -35,7 +35,7 @@ library(tidyverse)
 # ================================
 # 4. Read input data
 # ================================
-file_path <- "m6A-related genes across ecotypes.xlsx"
+file_path <- "data/m6A-related genes across ecotypes.xlsx"
 data <- read_excel(file_path, sheet = "S2")
 
 # Preview data
@@ -93,7 +93,7 @@ print(correlation_matrix)
 # ================================
 # 8. Plot correlation matrix
 # ================================
-pdf(file = "Figure_SX_correlation_matrix.pdf", width = 8, height = 8)
+pdf(file = "M6A_correlation_matrix.pdf", width = 8, height = 8)
 
 corrplot(
   correlation_matrix,
@@ -112,12 +112,6 @@ corrplot(
 
 dev.off()
 
-# ================================
-# 9. Save correlation matrix
-# ================================
-write.csv(correlation_matrix, 
-          file = "correlation_matrix.csv", 
-          row.names = TRUE)
 
 ############################################################
 # End of script
