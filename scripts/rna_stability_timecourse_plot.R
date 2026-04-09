@@ -1,5 +1,13 @@
 #rna_stability_timecourse_plot.R
-
+# NOTE:
+# This script provides a representative example for generating
+# time-course line plots used in this study.
+#
+# Similar plotting procedures were applied to other datasets,
+# but are not shown here to avoid redundancy.
+#
+# All line plots in the manuscript were generated using
+# the same workflow with different input datasets.
 ############################################################
 # Title: RNA stability analysis under heat stress (HS vs NS)
 # Description:
