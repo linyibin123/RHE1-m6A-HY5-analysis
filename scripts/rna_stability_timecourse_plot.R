@@ -125,12 +125,9 @@ p <- ggplot(data_summary,
 # ================================
 # 8. Save figure
 # ================================
-ggsave("Figure_SX_RNA_stability.pdf",
+ggsave("RNA_stability_HS_NS.pdf",
        p, width = 6, height = 4)
 
-ggsave("Figure_SX_RNA_stability.tiff",
-       p, width = 6, height = 4,
-       dpi = 300, compression = "lzw")
 
 ############################################################
 # End of script
